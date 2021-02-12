@@ -1,4 +1,9 @@
 console.log("Welcome to the main module")
-import { EntryListComponent } from "/scripts/JournalEntryList.js"
+import { getEntries } from "./JournalDataProvider.js"
+// import { JournalEntryComponent } from "./JournalEntry.js"
+import { EntriesList } from "./JournalEntryList.js"
 
-EntryListComponent()
+
+getEntries()
+EntriesList()
+// JournalEntryComponent()
