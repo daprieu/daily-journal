@@ -54,8 +54,9 @@ header {
 	
 	z-index: 2;
 	width: 40%;
-	padding: 20px;
+	padding: 20pt;
 	align-content: center;
+	margin: 1em;
 }
 
 main {
@@ -90,7 +91,7 @@ fieldset {
 }
 
 .journalEntries {
-	border: solid white;
+	/* border: solid white; */
 	display: flex;
 	flex-direction: column;
 	/* width: 81.2em;
@@ -112,7 +113,7 @@ fieldset {
 }
 
 .entry__date {
-	font-size: 2em;
+	font-size: 1em;
 }
 .entry__concept {
 	font-size: 14pt;

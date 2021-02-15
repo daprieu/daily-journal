@@ -7,9 +7,13 @@
 import { getEntries, useEntries } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
 
+const eventHub = document.querySelector(".container")
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector(".journalEntries")
-
+// eventHub.addEventListener("entriesChanged", customEvent => {
+//     // debugger
+//     EntriesList()
+// })
 const RenderEntryList = (entryArray) => {
 
     const entryHTMLRepresentation = entryArray.map( entryObj => JournalEntryComponent(entryObj)).join("")
@@ -23,10 +27,11 @@ const RenderEntryList = (entryArray) => {
 
 export const EntriesList = () => {
     getEntries()
-        
         .then(() => {
             const entries = useEntries()
             RenderEntryList(entries)
+            // console.log('RenderEntryList: ', RenderEntryList);
             
         })
 }
+
