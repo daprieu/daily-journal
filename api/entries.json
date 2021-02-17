@@ -36,17 +36,17 @@
   "entries": [
     {
       "date": "2021-02-17",
-      "concept": "a",
-      "entry": "a",
-      "mood": 8,
-      "id": 1
-    },
-    {
-      "date": "2021-02-17",
       "concept": "MOOD",
       "entry": "it works!!",
       "mood": 1,
       "id": 2
+    },
+    {
+      "date": "2021-02-17",
+      "concept": "delete button works",
+      "entry": "need to make it work with dispatch change state",
+      "mood": 2,
+      "id": 3
     }
   ]
 }

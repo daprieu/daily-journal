@@ -1,10 +1,5 @@
-/*
- *  Purpose:
- *    To render as many journal entry components as
- *    there are items in the collection exposed by the
- *    data provider component
- */
-import { getEntries, useEntries } from "./JournalDataProvider.js"
+
+import { deleteEntry, getEntries, useEntries } from "./JournalDataProvider.js"
 // import { JournalEntryComponent } from "./JournalEntry.js"
 import { useMoods, getMoods } from "./moods/MoodProvider.js"
 
@@ -28,6 +23,7 @@ const RenderEntryList = (entriesCollection, moodCollection) => {
             <div class="entry__entry">${entry.entry}</div>
             <div class="entry__mood">${relatedMood.mood}</div>
         </section>
+        <button class="dNoteButton" id="deleteEntry--${entry.id}">Delete</button>
     `
     }).join("")
   
@@ -45,3 +41,18 @@ export const EntriesList = () => {
         })
 }
 
+eventHub.addEventListener("click", clickEvent => {
+    // debugger
+    if (clickEvent.target.id.startsWith("deleteEntry--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        deleteEntry(id).then(
+            () => {
+                const updatedEntries = useEntries()
+                const moods = useMoods()
+                RenderEntryList(updatedEntries, moods)
+            }
+        )
+        
+    }
+})
