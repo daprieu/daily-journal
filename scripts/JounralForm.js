@@ -27,7 +27,7 @@ const renderForm = (selectMood) => {
     <select class="dropdown" id="enterMood">
         <option value="0">Select a mood...</option>
         ${
-        selectMood.map(mood => `<option value="${mood.id}">${mood.mood}</option>`).join("")
+        selectMood.map(mood => `<option value="${mood.id}">${ mood.mood }</option>`).join("")
         }
     </select>
     </fieldset>
