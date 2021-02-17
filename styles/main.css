@@ -45,18 +45,26 @@ body {
 }
 
 header {
-	text-align: center;
+	
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
-	color: white;
-	font-weight: bold;
+	
 	border: solid black;
 	
 	z-index: 2;
+	height: 8em;
 	width: 40%;
-	padding: 20pt;
-	align-content: center;
-	margin: 1em;
+	/* padding: 1em; */
+	/* align-content: center; */
+	margin-bottom: .5em;
+}
+.headerText {
+	margin-bottom: 0;
+	z-index: 2;
+	/* top: .5em; */
+	text-align: center;
+	color: white;
+	font-weight: bold;
 }
 
 main {

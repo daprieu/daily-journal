@@ -1,4 +1,38 @@
 {
+  "moods": [
+    {
+      "id": 1,
+      "mood": "Joyful"
+    },
+    {
+      "id": 2,
+      "mood": "Happy"
+    },
+    {
+      "id": 3,
+      "mood": "Relaxed"
+    },
+    {
+      "id": 4,
+      "mood": "Indifferent"
+    },
+    {
+      "id": 5,
+      "mood": "Confused"
+    },
+    {
+      "id": 6,
+      "mood": "Sad"
+    },
+    {
+      "id": 7,
+      "mood": "Anxious"
+    },
+    {
+      "id": 8,
+      "mood": "Angry"
+    }
+  ],
   "entries": [
     {
       "id": 1,
@@ -55,6 +89,13 @@
       "entry": "",
       "mood": "",
       "id": 8
+    },
+    {
+      "date": "2021-02-17",
+      "concept": "test entry",
+      "entry": "today is wed feb 17",
+      "mood": "",
+      "id": 9
     }
   ]
 }
