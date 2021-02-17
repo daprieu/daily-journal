@@ -41,7 +41,7 @@ export const JournalForm = () => {
     getMoods()
     .then( () => {
         const moods = useMoods()
-        console.log('moods: ', moods);
+        // console.log('moods: ', moods);
         renderForm(moods)
     })
 }
