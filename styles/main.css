@@ -45,17 +45,26 @@ body {
 }
 
 header {
-	text-align: center;
+	
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
-	color: white;
-	font-weight: bold;
+	
 	border: solid black;
 	
 	z-index: 2;
+	height: 8em;
 	width: 40%;
-	padding: 20px;
-	align-content: center;
+	/* padding: 1em; */
+	/* align-content: center; */
+	margin-bottom: .5em;
+}
+.headerText {
+	margin-bottom: 0;
+	z-index: 2;
+	/* top: .5em; */
+	text-align: center;
+	color: white;
+	font-weight: bold;
 }
 
 main {
@@ -90,7 +99,7 @@ fieldset {
 }
 
 .journalEntries {
-	border: solid white;
+	/* border: solid white; */
 	display: flex;
 	flex-direction: column;
 	/* width: 81.2em;
@@ -112,7 +121,7 @@ fieldset {
 }
 
 .entry__date {
-	font-size: 2em;
+	font-size: 1em;
 }
 .entry__concept {
 	font-size: 14pt;

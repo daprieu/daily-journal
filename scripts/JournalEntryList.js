@@ -5,28 +5,43 @@
  *    data provider component
  */
 import { getEntries, useEntries } from "./JournalDataProvider.js"
-import { JournalEntryComponent } from "./JournalEntry.js"
+// import { JournalEntryComponent } from "./JournalEntry.js"
+import { useMoods, getMoods } from "./moods/MoodProvider.js"
 
+const eventHub = document.querySelector(".container")
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector(".journalEntries")
+// eventHub.addEventListener("entriesChanged", customEvent => {
+//     // debugger
+//     EntriesList()
+// })
+const RenderEntryList = (entriesCollection, moodCollection) => {
 
-const RenderEntryList = (entryArray) => {
-
-    const entryHTMLRepresentation = entryArray.map( entryObj => JournalEntryComponent(entryObj)).join("")
+    entryLog.innerHTML = entriesCollection.map(entry => {
+        const relatedMood = moodCollection.find(mood => mood.id === entry.mood)
+        
+        return `        
+        <section id="entry" class="journalEntry">
+            <div class="entry__id">${entry.id}</div>
+            <div class="entry__date">${entry.date}</div>
+            <div class="entry__concept">${entry.concept}</div>
+            <div class="entry__entry">${entry.entry}</div>
+            <div class="entry__mood">${relatedMood.mood}</div>
+        </section>
+    `
+    }).join("")
   
-    entryLog.innerHTML += `
-        <article class="entryList">
-            ${entryHTMLRepresentation}
-        </article>
-        `
 }
 
 export const EntriesList = () => {
     getEntries()
-        
+        .then(getMoods)
         .then(() => {
+            const moods = useMoods()
             const entries = useEntries()
-            RenderEntryList(entries)
+            RenderEntryList(entries, moods)
+            // console.log('RenderEntryList: ', RenderEntryList);
             
         })
 }
+

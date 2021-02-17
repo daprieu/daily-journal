@@ -1,32 +1,52 @@
 {
-    "entries": [
-        {
-            "id": 1,
-            "date": "01/04/2021",
-            "concept": "HTML & CSS",
-            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-            "mood": "Ok"
-        },
-        {
-            "id": 2,
-            "date": "01/06/2021",
-            "concept": "Planning and wireframe",
-            "entry": "discussed how to organize thoughts and planning websites based on client needs used wireframe.",
-            "mood": "Ok"
-        },
-        {
-            "id": 3,
-            "date": "01/07/2021",
-            "concept": "GitHub intro",
-            "entry": "We talked about basic github and features/ how to use.",
-            "mood": "Ok"
-        },
-        {
-            "id": 4,
-            "date": "01/13/2021",
-            "concept": "JS and Marins aquarium",
-            "entry": "Implemented JS into martins aquarium for the first time and discussed code repetition and DRY code.",
-            "mood": "Confused"
-        }
-    ]
+  "moods": [
+    {
+      "id": 1,
+      "mood": "Joyful"
+    },
+    {
+      "id": 2,
+      "mood": "Happy"
+    },
+    {
+      "id": 3,
+      "mood": "Relaxed"
+    },
+    {
+      "id": 4,
+      "mood": "Indifferent"
+    },
+    {
+      "id": 5,
+      "mood": "Confused"
+    },
+    {
+      "id": 6,
+      "mood": "Sad"
+    },
+    {
+      "id": 7,
+      "mood": "Anxious"
+    },
+    {
+      "id": 8,
+      "mood": "Angry"
+    }
+  ],
+  "entries": [
+    {
+      "date": "2021-02-17",
+      "concept": "a",
+      "entry": "a",
+      "mood": 8,
+      "id": 1
+    },
+    {
+      "date": "2021-02-17",
+      "concept": "MOOD",
+      "entry": "it works!!",
+      "mood": 1,
+      "id": 2
+    }
+  ]
 }

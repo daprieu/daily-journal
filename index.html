@@ -9,38 +9,15 @@
     <body>
         <div class="bodyIMG"></div>
         <header>
+            <h1 class="headerText">NSS Notes</h1>
+            <h2 class="headerText">Alex Prieu's note book</h2>
             <img src="" alt="">
-            <h1>NSS Notes</h1>
-            <h2>Alex Prieu's note book</h2>
         </header>
-        <div> \n </div>
-        <main id="container">
-            <div class="entryCard">
-                <h3>Daily Journal</h3>
-                <form action=""> 
-                    <fieldset>
-                        <label for="journalDate">Entry Date:</label>
-                        <input type="date" name="journalDate" id="journalDate">
-                    </fieldset>
-                    <fieldset>
-                        <label for="entryCard__subject subject">Subject/ concepts covered:</label>
-                        <input type="text" name="concepts" >
-                    </fieldset>
-                    <fieldset>
-                        <label for="entryCard__text text">Thoughts:</label>
-                        <textarea name="textArea" id="text" cols="50" rows="10"></textarea>
-                    </fieldset>        
-                            <fieldset>
-                            <button>mood</button>
-                            <button>enter</button>
-                            </fieldset>
-                    </fieldset>
-                </form>
-            </div>
+        <main class="container">
+        
+            <div class="entryCard"></div>
             <div class ="journalEntries">Journal Entries</div>
         </main>
-
-
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
